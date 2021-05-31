@@ -4,51 +4,105 @@ import Tree from "./Tree";
 const treeData = [
   {
     key: "0",
-    label: "Documents",
-    subLabel: "Random Sublabel",
+    label: "Vishy Gopalakrishnan",
+    chief: true,
     icon: "fa fa-folder",
-    title: "Documents Folder",
+    title: "VP - TRANSFORMATION AND REALIZATION",
     children: [
       {
-        key: "0-0",
-        label: "Document 1-1",
+        key: "0-1",
+        label: "TEAM LEADER 1",
         icon: "fa fa-folder",
-        title: "Documents Folder",
         children: [
           {
             key: "0-1-1",
-            label: "Document-0-1.doc",
+            label: "APP GROUP LEADER NAME",
             icon: "fa fa-file",
-            title: "Documents Folder",
-          },
+            children:[
+              {
+                key: "0-1-1",
+                label: "APPLICATION NAME",
+                icon: "fa fa-file",
+              },
+              {
+                key: "0-1-1",
+                label: "APPLICATION NAME",
+                icon: "fa fa-file",
+              },
+            ],
+          },          
           {
             key: "0-1-2",
-            label: "Document-0-2.doc",
+            label: "APP GROUP LEADER NAME",
             icon: "fa fa-file",
-            title: "Documents Folder",
-          },
+            children:[
+              {
+                key: "0-1-2-1",
+                label: "APPLICATION NAME",
+                app: true,
+                icon: "fa fa-file",
+              },
+              {
+                key: "0-1-2-2",
+                label: "APPLICATION NAME",
+                app: true,
+                icon: "fa fa-file",
+              },
+            ],
+          },          
+        ],
+      },
+      {
+        key: "0-2",
+        label: "TEAM LEADER 2",
+        icon: "fa fa-folder",
+        children: [
           {
-            key: "0-1-3",
-            label: "Document-0-3.doc",
+            key: "0-2-1",
+            label: "APP GROUP LEADER NAME",
             icon: "fa fa-file",
-            title: "Documents Folder",
-          },
+            children:[
+              {
+                key: "0-2-1-1",
+                label: "APPLICATION NAME",
+                app: true,
+                icon: "fa fa-file",
+              },
+              {
+                key: "0-2-1-2",
+                label: "APPLICATION NAME",
+                app: true,
+                icon: "fa fa-file",
+              },
+            ],
+          },          
           {
-            key: "0-1-4",
-            label: "Document-0-4.doc",  
+            key: "0-1-2",
+            label: "APP GROUP LEADER NAME",
             icon: "fa fa-file",
-            title: "Documents Folder",
-          },
+            children:[
+              {
+                key: "0-1-2-1",
+                label: "APPLICATION NAME",
+                icon: "fa fa-file",
+              },
+              {
+                key: "0-1-2-2",
+                label: "APPLICATION NAME",
+                icon: "fa fa-file",
+              },
+            ],
+          },          
         ],
       },
     ],
   },
   {
     key: "1",
-    label: "Desktop",
-    subLabel: "Random Sublabel",
+    label: "ANDY MARCUS",
+    chief: true,
     icon: "fa fa-desktop",
-    title: "Desktop Folder",
+    title: "SVP AND CHIEF DATA OFFICER",
     children: [
       {
         key: "1-0",
@@ -66,10 +120,11 @@ const treeData = [
   },
   {
     key: "2",
-    label: "Downloads",
+    label: "Bill O`THERN",
+    chief: true,
     subLabel: "Random Sublabel",
     icon: "fa fa-download",
-    title: "Downloads Folder",
+    title: "svp & CSO",
     children: [],
   },
 ];

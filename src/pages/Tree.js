@@ -22,12 +22,15 @@ const TreeNode = ({ node }) => {
 
   return (
     <li className="d-tree-node border-0">
-      <table>
+      <table className="entries">
         <th>
-          <AccountCircleIcon />
+          {!node.app && (
+            <AccountCircleIcon />
+          )}
         </th>
         <tr className="trow">
           <div className="d-flex" onClick={(e) => setChildVisiblity((v) => !v)}>
+            <td>
             {hasChild && (
                 <div
                   className={`d-inline d-tree-toggler ${
@@ -37,14 +40,14 @@ const TreeNode = ({ node }) => {
                   {/* <FontAwesomeIcon icon="caret-right" /> */}
                 </div>
               )}
-
+              </td>
 
             <td className="tcell">
               <div className="col d-tree-head">
-                <i className={`mr-1 ${node.icon}`}> </i>
+                <i className={`mr-1 ${node.icon} user`}> </i>
                 <p>{node.label}</p><br />
-                {node.subLabel &&(
-                  <p className="subtitle">{node.subLabel}</p>
+                { node.chief && node.title &&(
+                  <p className="subtitle">{node.title}</p>
                 )}
               </div>
             </td>
@@ -54,7 +57,9 @@ const TreeNode = ({ node }) => {
         {hasChild && childVisible && (
           <div className="d-tree-content">
             <ul className="d-flex d-tree-container flex-column">
-              <Tree data={node.children} />
+              <li>
+                <Tree data={node.children} />
+              </li>
             </ul>
           </div>
         )}
