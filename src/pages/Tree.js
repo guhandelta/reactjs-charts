@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import React, { useState } from "react";
 import "../App.css";
@@ -23,11 +23,11 @@ const TreeNode = ({ node }) => {
   return (
     <li className="d-tree-node border-0">
       <table className="entries">
-        <th>
+        {/* <th>
           {!node.app && (
             <AccountCircleIcon />
           )}
-        </th>
+        </th> */}
         <tr className="trow">
           <div className="d-flex" onClick={(e) => setChildVisiblity((v) => !v)}>
             <td>
@@ -38,17 +38,27 @@ const TreeNode = ({ node }) => {
                   }`}
                 >
                   {/* <FontAwesomeIcon icon="caret-right" /> */}
+                  <ChevronRightIcon />
                 </div>
               )}
               </td>
 
             <td className="tcell">
               <div className="col d-tree-head">
-                <i className={`mr-1 ${node.icon} user`}> </i>
-                <p>{node.label}</p><br />
-                { node.chief && node.title &&(
-                  <p className="subtitle">{node.title}</p>
-                )}
+               <div className="grid-item">
+                {!node.app && (
+                  <i className={`mr-1 ${node.icon} user`}>
+                    <AccountCircleIcon />
+                  </i>)}
+               </div>
+                <div className="grid-item">
+                  <div className="item">
+                      <p>{node.label}</p><br />
+                      { node.chief && node.title &&(
+                        <p className="subtitle">{node.title}</p>
+                      )}
+                  </div>
+                </div>
               </div>
             </td>
           </div>
@@ -58,7 +68,7 @@ const TreeNode = ({ node }) => {
           <div className="d-tree-content">
             <ul className="d-flex d-tree-container flex-column">
               <li>
-                <Tree data={node.children} />
+                  <Tree data={node.children} />
               </li>
             </ul>
           </div>
@@ -70,3 +80,10 @@ const TreeNode = ({ node }) => {
 };
 
 export default Tree;
+
+
+
+
+
+
+
