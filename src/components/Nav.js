@@ -49,7 +49,7 @@ export default Nav
 
 const StyledUnorderedList = styled.ul`
     top: 0;
-    padding: 1% 30%;
+    padding: 1% 25%;
     border-bottom: 0.5px double green;
     list-style-type: none;
 `
