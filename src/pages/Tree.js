@@ -21,8 +21,8 @@ const TreeNode = ({ node }) => {
   const hasChild = node.children ? true : false;
 
   return (
-    <li className="d-tree-node border-0">
-      <table className="entries">
+    <li className="d-tree-node border-0 mt-3">
+      <div className="entries">
         {/* <th>
           {!node.app && (
             <AccountCircleIcon />
@@ -74,7 +74,7 @@ const TreeNode = ({ node }) => {
           </div>
         )}
         {/* <hr /> */}
-      </table>
+      </div>
     </li>
   );
 };

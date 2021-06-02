@@ -27,7 +27,13 @@
 .d-flex{
   display: inline;
   padding: -1em 0;
-  margin: 0;
+  margin: -1em 0;
+}
+
+.entries{
+  display: grid;
+  grid-template-rows: auto;
+  margin: 1em;
 }
 
 .subtitle{
