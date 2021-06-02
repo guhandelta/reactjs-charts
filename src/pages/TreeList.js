@@ -92,26 +92,22 @@ const details = [
 const treeData = [
   {
     key: "0",
-    label: "Vishy Gopalakrishnan",
+    label: "VISHY GOPALAKRISHNAN",
     chief: true,
-    icon: "fa fa-folder",
     title: "VP - TRANSFORMATION AND REALIZATION",
     children: details
   },
   {
     key: "1",
-    label: "ANDY MARCUS",
+    label: " ANDY MARCUS",
     chief: true,
-    icon: "fa fa-desktop",
     title: "SVP AND CHIEF DATA OFFICER",
     children: details
   },
   {
     key: "2",
-    label: "Bill O`THERN",
+    label: "Bill O'THERN",
     chief: true,
-    subLabel: "Random Sublabel",
-    icon: "fa fa-download",
     title: "SVP & CSO",
     children: details,
   },

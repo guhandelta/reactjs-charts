@@ -21,61 +21,60 @@ const TreeNode = ({ node }) => {
   const hasChild = node.children ? true : false;
 
   return (
-    <li className="d-tree-node border-0 mt-3">
-      <div className="entries">
-        {/* <th>
-          {!node.app && (
-            <AccountCircleIcon />
-          )}
-        </th> */}
-        <tr className="trow">
-          <div className="d-flex" onClick={(e) => setChildVisiblity((v) => !v)}>
-            <td>
-            {hasChild && (
-                <div
-                  className={`d-inline d-tree-toggler ${
-                    childVisible ? "active" : ""
-                  }`}
-                >
-                  {/* <FontAwesomeIcon icon="caret-right" /> */}
-                  <ChevronRightIcon />
-                </div>
-              )}
-              </td>
+    <>
+      <li className="d-tree-node border-0 mt-3">
+        <div className="entries">
+          <tr className="trow">
+            <div className="d-flex" onClick={(e) => setChildVisiblity((v) => !v)}>
+              <td>
+              {hasChild && (
+                  <div
+                    className={`d-inline d-tree-toggler ${
+                      childVisible ? "active" : ""
+                    }`}
+                  >
+                    <ChevronRightIcon />
+                  </div>
+                )}
+                </td>
 
-            <td className="tcell">
-              <div className="col d-tree-head">
-               <div className="grid-item">
-                {!node.app && (
-                  <i className={`mr-1 ${node.icon} user`}>
-                    <AccountCircleIcon />
-                  </i>)}
-               </div>
+              <td className="tcell">
+                <div className="col d-tree-head">
                 <div className="grid-item">
-                  <div className="item">
-                      <p>{node.label}</p><br />
-                      { node.chief && node.title &&(
-                        <p className="subtitle">{node.title}</p>
-                      )}
+                  {!node.app && (
+                    <i className='mr-1'>
+                     {hasChild && (
+                        <div className={`${node.chief ? 'chief' : 'member'}`}>
+                          <AccountCircleIcon />&emsp;&emsp;&emsp;
+                        </div>
+                     )}
+                    </i>)}
+                </div>
+                  <div className="grid-item">
+                    <div className="item">
+                        <p>{node.label}</p><br />
+                        { node.chief && node.title &&(
+                          <p className="subtitle">{node.title}</p>
+                        )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </td>
-          </div>
-        </tr>
+              </td>
+            </div>
+          </tr>
 
-        {hasChild && childVisible && (
-          <div className="d-tree-content">
-            <ul className="d-flex d-tree-container flex-column">
-              <li>
-                  <Tree data={node.children} />
-              </li>
-            </ul>
-          </div>
-        )}
-        {/* <hr /> */}
-      </div>
-    </li>
+          {hasChild && childVisible && (
+            <div className="d-tree-content">
+              <ul className="d-flex d-tree-container flex-column">
+                <li className="child">
+                    <Tree data={node.children} />
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
+      </li>
+    </>
   );
 };
 

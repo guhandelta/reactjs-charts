@@ -7,8 +7,6 @@
   margin-top: -3.8em;
   margin-bottom: -2em;
   margin-left: 4em;
-  border: khaki;
-
 }
 .d-tree-node table {
   height: 0.01em;
@@ -28,6 +26,7 @@
   display: inline;
   padding: -1em 0;
   margin: -1em 0;
+  /* border-left: 1 px solid #000; */
 }
 
 .entries{
@@ -43,14 +42,21 @@
 }
 
 .item{
-  border: 1px solif #000;
+  /* border-left: 1px solif #000; */
+  margin-left: 2em;
+}
+
+.child{
+  display: grid;
+  grid-template-rows: 30% 30% 30%;
 }
 
 .grid-item{
   margin: 0.2em 1.5em;
+  /* border: 1px dotted #000; */
 }
 
-.ul:nth-child(2){
+.ul:nth-child(even){
   margin-top: -3em;
   background-color: lawngreen;
 }
@@ -62,7 +68,13 @@
   margin-top: -0.8em;
 }
 
-.tcell .user{
+.chief{
+  padding-top: 1.2em;
   transform: scale(2.5);
+}
+
+.member{
+  padding-top: 1.2em;
+  transform: scale(1.5);
 }
 
