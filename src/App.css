@@ -84,10 +84,6 @@
   /* background-color: cadetblue; */
   /* width: 1.5em;
   margin-right: 1em; */
-<<<<<<< HEAD
-  border: 1px solid #000;
-=======
->>>>>>> aaf2963454d754da73c2c52464e093f5bd2c598d
 }
 
 .member{
@@ -98,21 +94,12 @@
 
 /* .toggler{
   grid-column: 1/1;
-<<<<<<< HEAD
 }
 
 .icon{
   grid-column: 3/1;
 }
 
-=======
-}
-
-.icon{
-  grid-column: 3/1;
-}
-
->>>>>>> aaf2963454d754da73c2c52464e093f5bd2c598d
 .content{
   grid-column: 4/8; 
 }*/
