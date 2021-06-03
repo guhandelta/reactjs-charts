@@ -51,6 +51,10 @@
   grid-template-rows: 30% 30% auto;
   /* background-color: crimson; */
 }
+.pad{
+  margin-left: -0.3em;
+  padding-left: -0.3em;
+}
 
 .grid-item{
   margin: 0.2em 1.5em;
