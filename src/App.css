@@ -48,7 +48,8 @@
 
 .child{
   display: grid;
-  grid-template-rows: 30% 30% 30%;
+  grid-template-rows: 30% 30% auto;
+  /* background-color: crimson; */
 }
 
 .grid-item{
@@ -56,9 +57,14 @@
   /* border: 1px dotted #000; */
 }
 
-.ul:nth-child(even){
-  margin-top: -3em;
-  background-color: lawngreen;
+.item:nth-child(odd){
+  margin-top: -1em;;
+}
+.item:nth-child(odd){
+  padding-top: 1.1rem;
+  margin-left: 2rem;
+  /* background-color: lawngreen; */
+  padding: -0.5em;
 }
 /* .grid-item::nth-child(4){
   margin-bottom: 30em;
@@ -69,12 +75,28 @@
 }
 
 .chief{
-  padding-top: 1.2em;
+  padding-top: 1.6em;
   transform: scale(2.5);
+  /* background-color: cadetblue; */
+  /* width: 1.5em;
+  margin-right: 1em; */
 }
 
 .member{
   padding-top: 1.2em;
   transform: scale(1.5);
+  /* margin-right: -0.1em; */
 }
+
+/* .toggler{
+  grid-column: 1/1;
+}
+
+.icon{
+  grid-column: 3/1;
+}
+
+.content{
+  grid-column: 4/8; 
+}*/
 
