@@ -66,7 +66,7 @@ const TreeNode = ({ node }) => {
           {hasChild && childVisible && (
             <div className="d-tree-content">
               <ul className="d-flex d-tree-container flex-column">
-                <li className="child">
+                <li className={`child ${node.chief ? "" : "pad" }`}>
                     <Tree data={node.children} />
                 </li>
               </ul>
