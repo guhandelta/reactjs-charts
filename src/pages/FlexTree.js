@@ -4,7 +4,7 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import '../App.css';
 
-const TestTree = ({ data = [] }) => {
+const FlexTree = ({ data = [] }) => {
     return (
         <StyledContainer>
           {data.map((tree) => (
@@ -23,16 +23,16 @@ const TreeNode = ({ node }) => {
 
     return (
         <>  
-            <StyledGridCard onClick={e => setChildVisiblity(v => !v)}>
-                <StyledGridItemOne>
+            <StyledFlexCard onClick={e => setChildVisiblity(v => !v)}>
+                <StyledFlexItemOne>
                     {hasChild &&(
                         <div className={`org-tree-toggler ${childVisible ? 'active' : ''}`}>
                             <ChevronRightIcon />
                         </div>
                     )}
-                </StyledGridItemOne>
+                </StyledFlexItemOne>
                {/* <div className="col"> */}
-                <StyledGridItemTwo>
+                <StyledFlexItemTwo>
                         {!node.app && (
                             <StyledUserIcon>
                                 {hasChild && (
@@ -42,59 +42,57 @@ const TreeNode = ({ node }) => {
                                 )}
                             </StyledUserIcon>
                         )}
-                    </StyledGridItemTwo>
-                    <StyledGridItemThree>
+                    </StyledFlexItemTwo>
+                    <StyledFlexItemThree>
                         <p>{node.label}</p><br />
                         { node.chief && node.title &&(
                         <p className="subtitle">{node.title}</p>
                         )}
-                    </StyledGridItemThree>
+                    </StyledFlexItemThree>
                {/* </div> */}
                {hasChild && childVisible && (
                 <div className="d-tree-content">
                 <ul className="d-flex d-tree-container flex-column">
                     <li className="child">
-                        <TestTree data={node.children} />
+                        <FlexTree data={node.children} />
                     </li>
                 </ul>
                 </div>
             )}
-            </StyledGridCard>
+            </StyledFlexCard>
         </>
     )
 }
 
 const StyledContainer = styled.div`
-    display: grid;
-    grid-template-rows: auto;
-    grid-gap: 0.05em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 `
 
-const StyledGridCard = styled.div`
-    display: grid;
-    padding: 1rem;
-    grid-template-columns: auto auto auto;
-    grid-gap: 0.05em;
+const StyledFlexCard = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* padding: 1rem; */
     font-size: 30px;
 `
-const StyledGridItemOne = styled.div`
+const StyledFlexItemOne = styled.div`
     height: 2em;
     width: 2em;
-    grid-column: 1/ span 1;
     background-color: paleturquoise;
     padding-top: 1.85em;
 `
-const StyledGridItemTwo = styled.div`
+const StyledFlexItemTwo = styled.div`
     height: 2em;
     width: 3em;
-    grid-column: 2/ span 1;
     background-color: paleturquoise;
     padding: -0.5em 1em;
 `
-const StyledGridItemThree = styled.div`
+const StyledFlexItemThree = styled.div`
     height: 2em;
     width: auto;
-    grid-column: 3/ span 64;
     background-color: paleturquoise;
     padding-left: 0.5em;
     padding-top: -0.4em;
@@ -104,4 +102,4 @@ const StyledUserIcon = styled.div`
     transform:scale(${props => props.scale ? props.scale : 1.5});
 `
 
-export default TestTree
+export default FlexTree

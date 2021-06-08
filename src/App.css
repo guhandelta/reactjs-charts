@@ -3,16 +3,18 @@
 }
 
 .d-tree-content{
-  padding: 0;
-  margin-top: -3.8em;
+  position: relative;
+  padding-left: -30.5em;
+  margin-top: -1em;
   margin-bottom: -2em;
-  margin-left: 4em;
+  margin-left: 4.3em;
+  border-left: 1px dashed #000;
+  /* background-color: blue; */
 }
 .d-tree-node table {
   height: 0.01em;
   padding: -5em 0;
 }
-
 .d-tree-head{
   display: grid;
   grid-template-columns: 10% 90%;
@@ -46,10 +48,22 @@
   margin-left: 2em;
 }
 
+.filler {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* border-bottom: 1px dashed #333; */
+  height: 50%;
+}
+
 .child{
-  display: grid;
-  grid-template-rows: 30% 30% auto;
+   display: grid;
+   position: relative;
+  /*grid-template-rows: 30% 30% auto; */
+  padding: -2em 0;
   /* background-color: crimson; */
+  /* border: 1px dotted #000; */
+  grid-gap: -2em 0;
 }
 .pad{
   margin-left: -0.3em;
@@ -84,6 +98,7 @@
   /* background-color: cadetblue; */
   /* width: 1.5em;
   margin-right: 1em; */
+  /* border: 1px solid #000; */
 }
 
 .member{
@@ -91,7 +106,9 @@
   transform: scale(1.5);
   /* margin-right: -0.1em; */
 }
-
+/* .tcell{
+  background-color: blanchedalmond;
+} */
 /* .toggler{
   grid-column: 1/1;
 }

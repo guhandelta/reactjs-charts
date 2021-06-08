@@ -5,5 +5,8 @@ import DoughnutChart from './Doughnut';
 import TreeList from './TreeList';
 import MultiSelectTreeView from './MaterialTree';
 import RecursiveTreeView from './stree';
+import FlexTreeList from './FlexTreeList';
+import CustomizedTreeView from './MaterialLineTree';
+import SortableOrgTree from './SortableOrgTree';
 
-export {Home, BarChart, StackedBarChart, DoughnutChart, TreeList, MultiSelectTreeView, RecursiveTreeView }
+export {Home, BarChart, StackedBarChart, DoughnutChart, TreeList, MultiSelectTreeView, RecursiveTreeView, FlexTreeList, CustomizedTreeView, SortableOrgTree }

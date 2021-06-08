@@ -1,0 +1,101 @@
+$color_silver_chalice: #AAA;
+$color_tundora: #444;
+$color_wild_sand: #F5F5F5;
+
+
+.expand-collapse-icon {
+    cursor: pointer;
+}
+
+.chief-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.member-icon {
+    width: 20px;
+    height: 26px;
+    margin-right: 5px;
+}
+
+.mr-1{
+   margin-left: 4px;
+}
+
+.flex{
+    display: flex;
+}
+
+.align-item-center{
+    align-items: center;
+}
+
+.treeview {
+    // float: left;
+    width: 100%;
+    background-color: $color_wild_sand;
+    padding: 15px 30px 30px;
+    border-top: 1px  solid #efefee;
+    border-bottom: 1px solid #efefee;
+
+	ul {
+        // float: left;
+        width: 100%;
+        position: relative;
+        margin-left: 21px;
+
+        li {
+            // float: left;
+            width: 100%;
+            border-left: 1px dashed  $color_tundora;
+            padding: 10px 0;
+            list-style-type: none;
+
+            .content {
+                // float: left;
+                width: 100%;
+                font-family: Arial;
+                font-size: 15px;
+                color: $color_tundora;
+                line-height: 1.5;
+                padding-left: 25px;
+                position: relative;
+                bottom: -22px;
+
+                &:before {
+                    content: "";
+                    width: 30px;
+                    height: 1px;
+                    // background-color: $color_tundora;
+                    position: absolute;
+                    top: 50%;
+                    bottom: 50%;
+                    left: 0;
+                    border-bottom: 1px dashed $color_tundora;
+                    box-sizing: border-box;
+                }
+            }
+            ul {
+                margin: 20px 0;
+                li {
+                    border-left-color: $color_tundora;
+                    margin-left: 59px;
+                    width: calc(100% - 50px);
+
+                    .content {
+                        color: $color_tundora;
+                        padding-left: 26px;
+
+                        &:before {
+                            // background-color: $color_tundora;
+                            width: 30px;
+                            border-bottom: 1px dashed $color_tundora;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

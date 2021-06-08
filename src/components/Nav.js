@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route, Link  } from 'react-router-dom';
 import styled from 'styled-components';
-import { Home, BarChart, StackedBarChart, DoughnutChart, TreeList, MultiSelectTreeView, RecursiveTreeView } from '../pages';
+import { Home, BarChart, StackedBarChart, DoughnutChart, TreeList, MultiSelectTreeView, RecursiveTreeView, FlexTreeList, CustomizedTreeView, SortableOrgTree } from '../pages';
 
 const Nav = () => {
     return (
@@ -29,6 +29,15 @@ const Nav = () => {
                         <StyledList>
                             <Link to="/RecursiveTreeView"><StyledLink>STree</StyledLink></Link>&emsp;
                         </StyledList>
+                        <StyledList>
+                            <Link to="/FlexTreeList"><StyledLink>FlexTreeList</StyledLink></Link>&emsp;
+                        </StyledList>
+                        <StyledList>
+                            <Link to="/CustomizedTreeView"><StyledLink>CustomizedTreeView</StyledLink></Link>&emsp;
+                        </StyledList>
+                        <StyledList>
+                            <Link to="/SortableOrgTree"><StyledLink>SortableOrgTree</StyledLink></Link>&emsp;
+                        </StyledList>
                     </StyledUnorderedList>
                 </nav>
                 <Switch>
@@ -39,6 +48,8 @@ const Nav = () => {
                     <Route path="/OrgTree" component={TreeList}></Route>
                     <Route path="/MaterialTree" component={MultiSelectTreeView}></Route>
                     <Route path="/RecursiveTreeView" component={RecursiveTreeView}></Route>
+                    <Route path="/CustomizedTreeView" component={CustomizedTreeView}></Route>
+                    <Route path="/SortableOrgTree" component={SortableOrgTree}></Route>
                 </Switch>
             </Router>
         </>
