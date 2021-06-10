@@ -8,19 +8,19 @@ $color_wild_sand: #F5F5F5;
 }
 
 .chief-icon {
-    width: 35px;
-    height: 35px;
-    margin-right: 5px;
+    width: 2.1875em;
+    height: 2.1875em;
+    margin-right: 0.3125em;
 }
 
 .member-icon {
-    width: 20px;
-    height: 26px;
-    margin-right: 5px;
+    width: 1.25em;
+    height: 1.625em;
+    margin-right: 0.3125em;
 }
 
 .mr-1{
-   margin-left: 4px;
+   margin-left: 0.25em;
 }
 
 .flex{
@@ -34,38 +34,45 @@ $color_wild_sand: #F5F5F5;
 .treeview {
     // float: left;
     width: 100%;
-    background-color: $color_wild_sand;
-    padding: 15px 30px 30px;
+    padding: 0.9375em 1.875em 1.875em;
     border-top: 1px  solid #efefee;
     border-bottom: 1px solid #efefee;
-
+    // background-color: antiquewhite;
+    
 	ul {
         // float: left;
         width: 100%;
         position: relative;
-        margin-left: 21px;
+        margin-left: 1.3125em;
+        // background-color: antiquewhite;
+        // background-color: antiquewhite;
 
         li {
             // float: left;
             width: 100%;
-            border-left: 1px dashed  $color_tundora;
-            padding: 10px 0;
             list-style-type: none;
+            border-left: 1px dashed  $color_tundora;
+            // background-color: aquamarine;
+            padding: 1.1em 0;
+            margin-left: -5.2em;
+            margin-bottom: -0.3em;
 
             .content {
                 // float: left;
                 width: 100%;
                 font-family: Arial;
-                font-size: 15px;
+                font-size: 0.9375em;
                 color: $color_tundora;
                 line-height: 1.5;
-                padding-left: 25px;
+                padding-left: 1.25625em;
                 position: relative;
-                bottom: -22px;
+                bottom: 1.375em;
+                margin-bottom: -2.7em;
+                // background-color: blueviolet;
 
                 &:before {
                     content: "";
-                    width: 30px;
+                    width: 1.875em;
                     height: 1px;
                     // background-color: $color_tundora;
                     position: absolute;
@@ -77,19 +84,25 @@ $color_wild_sand: #F5F5F5;
                 }
             }
             ul {
-                margin: 20px 0;
+                margin: 1.25em 0;
                 li {
-                    border-left-color: $color_tundora;
-                    margin-left: 59px;
-                    width: calc(100% - 50px);
+                    margin-top: -1.6em;
+                    margin-bottom: -1.6em;
+                    border-left-color: #000;
+                    margin-left: 0.7em;
+                    width: calc(100% - 3.215em);
 
                     .content {
-                        color: $color_tundora;
-                        padding-left: 26px;
+                        color: #000;
+                        // background-color: burlywood;
+                        padding-left: 1.625em;
+                        margin: 0.2em 0;
+                        // margin-left: -1.625em;
+                        // margin-top: -0.625em;
 
                         &:before {
-                            // background-color: $color_tundora;
-                            width: 30px;
+                            background-color: $color_tundora;
+                            width: 1.875em;
                             border-bottom: 1px dashed $color_tundora;
                             box-sizing: border-box;
                         }
