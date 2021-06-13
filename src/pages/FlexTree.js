@@ -36,7 +36,7 @@ const TreeNode = ({ node }) => {
                         {!node.app && (
                             <StyledUserIcon>
                                 {hasChild && (
-                                    <StyledUserIcon className={`${node.chief ? `scale=2.5` : `scale = 1.5`}`}>
+                                    <StyledUserIcon className={`${node.chief ? `` : ``}`}>
                                         <AccountCircleIcon />&emsp;&emsp;&emsp;
                                     </StyledUserIcon>
                                 )}
@@ -81,14 +81,15 @@ const StyledFlexCard = styled.div`
 const StyledFlexItemOne = styled.div`
     height: 2em;
     width: 2em;
-    background-color: paleturquoise;
-    padding-top: 1.85em;
-`
+    /* background-color: paleturquoise; */
+    border: 1px solid #000;
+    `
 const StyledFlexItemTwo = styled.div`
     height: 2em;
     width: 3em;
-    background-color: paleturquoise;
-    padding: -0.5em 1em;
+    /* background-color: paleturquoise; */
+    padding: -0.3em 1em;
+    border: 1px solid #000;
 `
 const StyledFlexItemThree = styled.div`
     height: 2em;

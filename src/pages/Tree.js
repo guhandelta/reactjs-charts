@@ -42,20 +42,20 @@
 //                 </td>
 
 //               <td className="tcell">
-//                 <div className="col d-tree-head">
-//                 <div className="grid-item">
-//                   {!node.app && (
-//                     <i className='mr-1'>
-//                      {hasChild && (
-//                         <div className={`${node.chief ? 'chief' : 'member'}`}>
-//                           <AccountCircleIcon />&emsp;&emsp;&emsp;
-//                         </div>
-//                      )}
-//                     </i>)}
-//                 </div>
+//                 <div className="d-tree-head">
 //                   <div className="grid-item">
-//                     <div className="item">
-//                         <p>{node.label}</p><br />
+//                     {!node.app && (
+//                       <i className='mr-1'>
+//                       {hasChild && (
+//                           <div className={`${node.chief ? 'chief' : 'member'}`}>
+//                             <AccountCircleIcon />&emsp;&emsp;&emsp;
+//                           </div>
+//                       )}
+//                       </i>)}
+//                   </div>
+//                   <div className="grid-item">
+//                     <div className={`${node.chief ? 'item' : ''}`}>
+//                         <p className={`${node.chief ? '' : 'name'}`}>{node.label}</p><br />
 //                         {node.chief && node.title &&(
 //                           <p className="subtitle">{node.title}</p>
 //                         )}
@@ -87,25 +87,27 @@
 
 
 
-
-
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Container } from '@material-ui/core'
 import React, { useState } from "react";
 import "../style.scss";
 
 
 const TreeRoot = ({ data = [] }) => (
-  <div className="">
-    { data.map((tree) => {
-      return (
-        <div class="treeview">
-          <TreeStart node={ tree } />
-        </div>
-      )
-    }) }
-  </div>
+  <Container maxWidth="md">
+    <div>
+      { data.map((tree) => {
+        return (
+          <div class="treeview">
+            <TreeStart node={ tree } /> <br />
+            <hr />
+          </div>
+        )
+      }) }
+    </div>
+  </Container>
 );
 
 
@@ -138,7 +140,6 @@ const TreeNode = (node) => {
   return (
     <li>
       <TreeNodeContent { ...node } onClick={ () => setChildVisiblity(val => !val) } childVisible={ childVisible } />
-
       {childVisible ? <Tree node={ children } /> : null }
     </li>
   )
@@ -152,11 +153,11 @@ const TreeNodeContent = ({ children, chief, label, title, childVisible, onClick}
       </div>
     ) }
     <div className={ `flex align-item-center ${ chief ? 'chief-icon' : 'member-icon' } ${ !children ? 'mr-1': ''}`}>
-      <AccountCircleIcon fontSize={ chief ? 'large' : 'small' } />&emsp;&emsp;&emsp;
-                        </div>
+      <AccountCircleIcon fontSize={ chief ? '.large' : '.small' } />&emsp;&emsp;&emsp;
+    </div>
     <div>
-      <div>{ label }</div>
-      { title && <div>{ title }</div> }
+      <div className={`${chief ? "" : "name"}`}>{ label }</div>
+      { title && <div className="title">{ title }</div> }
     </div>
   </div>
 </div>);

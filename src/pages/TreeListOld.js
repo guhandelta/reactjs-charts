@@ -1,6 +1,4 @@
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import styled from 'styled-components';
+import STree from "./stree";
 
 const details = [
   {
@@ -115,105 +113,24 @@ const treeData = [
   },
 ];
 
-const FlexTreeList = () => {
+const TreeListOld = () => {
   return (
     <>
-      <StyledFlexContainer>
-        <StyledFlexCard>
-          <StyledFlexItemOne>
-            <p><ChevronRightIcon /></p>
-          </StyledFlexItemOne>
-          <StyledFlexItemTwo>
-              <p>2</p>
-          </StyledFlexItemTwo>
-          <StyledFlexItemThree>3-----------------------------------------------------</StyledFlexItemThree>
-        </StyledFlexCard>
-        <StyledFlexCard>
-          <StyledFlexItemOne>
-            <p><ChevronRightIcon /></p>
-          </StyledFlexItemOne>
-          <StyledFlexItemTwo>
-            <p>2</p>
-          </StyledFlexItemTwo>
-          <StyledFlexItemThree>3--------------------------------</StyledFlexItemThree>
-        </StyledFlexCard>
-        <StyledFlexCard>
-          <StyledFlexItemOne>
-            <p><ChevronRightIcon /></p>
-          </StyledFlexItemOne>
-          <StyledFlexItemTwo>
-            <p>2</p>
-          </StyledFlexItemTwo>
-          <StyledFlexItemThree>3--------</StyledFlexItemThree>
-        </StyledFlexCard>
-      </StyledFlexContainer>
-    </>
-  );
-};
-
-export default FlexTreeList;
-
-const StyledFlexContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-`
-
-const StyledFlexCard = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 0.1rem;
-    font-size: 30px;
-`
-const StyledFlexItemOne = styled.div`
-    margin: 0.1em;
-    text-align: center;
-    height: 2em;
-    width: 2em;
-    background-color: aquamarine;
-
-    > p{
-      vertical-align: text-top;
-      margin-top: 0.4em;
-    }
-  `
-const StyledFlexItemTwo = styled.div`
-    margin: 0.1em;
-    text-align: center;
-    height: 2em;
-    width: 3em;
-    background-color: bisque;
-    padding: -0.3em 1em;
-  `
-const StyledFlexItemThree = styled.div`
-    margin: 0.1em;
-    text-align: center;
-    height: 2em;
-    width: auto;
-    background-color: paleturquoise;
-    padding-left: 0.3em;
-    padding-right: 0.2em;
-    padding-top: -0.4em;
-`
-const StyledUserIcon = styled.div`
-    margin: 2em -4em -2em 4em;
-    transform:scale(${props => props.scale ? props.scale : 1.5});
-`
-
-{/*
-   <div className="row">
+      <div className="row">
         <div className="col text-center">
           <h2>Tree Visualization component</h2>
           <p className="mt-3">
             <div className="row mt-3 d-flex justify-content-center">
               <div className="col-lg-8 text-left text-dark">
-                <FlexTree data={treeData} />
+                <STree data={treeData} />
                 <hr />
               </div>
             </div>
           </p>
         </div>
       </div>
-*/}
+    </>
+  );
+};
+
+export default TreeListOld;
