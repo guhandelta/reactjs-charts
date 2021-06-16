@@ -1,0 +1,108 @@
+.expand-collapse-icon {
+    cursor: pointer;
+}
+
+.chief-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.member-icon {
+    width: 20px;
+    height: 26px;
+    margin-right: 5px;
+}
+
+.mr-1 {
+    margin-left: 4px;
+}
+
+.ml-2 {
+    margin-left: 8px;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.treeview {
+    /* // float: left; */
+    width: 100%;
+    /* background-color: #F5F5F5; */
+    padding: 15px 30px 30px;
+    border-top: 1px solid #efefee;
+    border-bottom: 1px solid #efefee;
+}
+
+.treeview ul {
+    /* // float: left; */
+    width: 100%;
+    position: relative;
+    margin-left: -1.25em;
+    margin-top: -0.3em;
+}
+
+.treeview ul li {
+    /* // float: left; */
+    /* background-color: #444; */
+    /* margin-left: -5em; */
+    /* margin-top: 0.5em; */
+    list-style-type: none;
+    width: 100%;
+    border-left: 1px dashed #444;
+    padding: 10px 0;
+}
+
+.treeview ul li .content {
+    /* // float: left; */
+    /* background-color: #444; */
+    list-style-type: none;
+    width: 100%;
+    font-family: Arial;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+    padding-left: 25px;
+    position: relative;
+    bottom: -22px;
+}
+
+.treeview ul li .content:before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: #444;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    border-bottom: 1px dashed #444;
+    box-sizing: border-box;
+}
+
+.treeview ul li ul {
+    margin: 20px 0;
+}
+
+.treeview ul li ul li {
+    border-left-color: #444;
+    margin-left: 59px;
+    width: calc(100% - 50px);
+}
+
+.treeview ul li ul li .content {
+    color: #444;
+    padding-left: 26px;
+}
+
+.treeview ul li ul li .content:before {
+    /* // background-color: #444; */
+    width: 30px;
+    border-bottom: 1px dashed #444;
+    box-sizing: border-box;
+}

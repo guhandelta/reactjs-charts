@@ -52,9 +52,9 @@ const TreeNode = (node) => {
 }
 
 const TreeNodeContent = ({ children, chief, label, title, childVisible, onClick}) => (<div className="content">
-  <div class="flex align-item-center" onClick={ onClick }>
+  <div class="flex align-item-center">
     { !!children && (
-      <div className="expand-collapse-icon flex align-item-center" >
+      <div className="expand-collapse-icon flex align-item-center" onClick={ onClick }>
         {childVisible ? <ExpandMoreIcon /> : <ChevronRightIcon /> }
       </div>
     ) }

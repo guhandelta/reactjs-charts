@@ -1,11 +1,20 @@
 .d-tree-container {
   list-style: none;
+  padding: 0;
+}
+
+.d-tree-node {
+  padding: 0.75rem 1.25rem;
+}
+
+.d-tree-toggler.active {
+  transform: rotate(45deg);
 }
 
 .entries{
   display: grid;
   grid-template-rows: 5rm 5em 5em;
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
   padding: -5em 1em;
   margin: 1em;
   margin-bottom: 3em;
@@ -17,7 +26,7 @@
   /* margin-top: -2.5em; */
   margin-bottom: -2em;
   margin-left: 4.7em;
-  /* border: 1px dashed #000; */
+  border: 1px dashed #000;
   /* background-color: blue; */
 }
 .d-tree-node table {
@@ -38,8 +47,8 @@
 
 .d-flex{
   display: inline;
-  padding: -1em 0;
-  margin: -1em 0;
+  padding: -10em;
+  margin: -10em 0;
   /* border-left: 1 px solid #000; */
 }
 
@@ -111,17 +120,7 @@
   /* margin-right: -0.1em; */
 }
 .tcell{
-  background-color: blanchedalmond;
-}
-/* .toggler{
-  grid-column: 1/1;
+  /* background-color: blanchedalmond; */
 }
 
-.icon{
-  grid-column: 3/1;
-}
-
-.content{
-  grid-column: 4/8; 
-}*/
 

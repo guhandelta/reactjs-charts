@@ -126,7 +126,7 @@ const FlexTreeList = () => {
           <StyledFlexItemTwo>
               <p>2</p>
           </StyledFlexItemTwo>
-          <StyledFlexItemThree>3-----------------------------------------------------</StyledFlexItemThree>
+          <StyledFlexItemThree>3</StyledFlexItemThree>
         </StyledFlexCard>
         <StyledFlexCard>
           <StyledFlexItemOne>
@@ -135,7 +135,7 @@ const FlexTreeList = () => {
           <StyledFlexItemTwo>
             <p>2</p>
           </StyledFlexItemTwo>
-          <StyledFlexItemThree>3--------------------------------</StyledFlexItemThree>
+          <StyledFlexItemThree>3</StyledFlexItemThree>
         </StyledFlexCard>
         <StyledFlexCard>
           <StyledFlexItemOne>
@@ -144,7 +144,7 @@ const FlexTreeList = () => {
           <StyledFlexItemTwo>
             <p>2</p>
           </StyledFlexItemTwo>
-          <StyledFlexItemThree>3--------</StyledFlexItemThree>
+          <StyledFlexItemThree>3</StyledFlexItemThree>
         </StyledFlexCard>
       </StyledFlexContainer>
     </>
